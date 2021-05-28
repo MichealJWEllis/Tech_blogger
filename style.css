@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar a {
+  font-size: 25px;
+}
+
+#cards div {
+  padding: 20px;
+}
