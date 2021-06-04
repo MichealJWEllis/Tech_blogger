@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+body,
+html {
+  height: 100%;
+}
+
+#body {
+  background-image: url(./assets/external-content.duckduckgo.com.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #navbar a {
   font-size: 25px;
 }
