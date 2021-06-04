@@ -21,7 +21,7 @@
     </nav>
 </header>
 <div class="mx-auto mt-4" style="width: 300px; text-align: center;">
-    <h2>Previous Posts</h2>
+    <h2 style="color:white">Previous Posts</h2>
 </div>
 <div class="card mx-auto mt-4" style="width:800px; border: 1px solid black;" id="cards">
     <div class="card-header d-flex justify-content-between" style="background-color:gray;">
@@ -32,6 +32,17 @@
         <p class="card-text">Post information</p>
         <button id="updateBtn" class="btn btn-primary">Update Post</button>
         <button id="delPostBtn" class="btn btn-primary">Delete Post</button>
+        <button id="commentBtn" class="btn btn-primary">Comment</button>
+        <form class="comment-form">
+            <div>
+                <textarea id="commentInfo" class="d-flex mb-2 mt-2" style="width: 600px; height: 80px;"></textarea>
+            </div>
+
+            <div>
+                <button id="commentBtn" class="btn btn-primary">add comment</button>
+            </div>
+        </form>
+
     </div>
     <footer class="page-footer font-small badge-dark fixed-bottom">
         <div class="footer-copyright text-center py-3">© 2020 Copyright:

@@ -18,10 +18,6 @@ app.engine('handlebars', exphbs({
 // app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// app.get('/', (req, res) => {
-//   res.render('create_post')
-// })
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
