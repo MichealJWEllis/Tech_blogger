@@ -1,0 +1,41 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Create Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+            <a class="navbar-brand" href="#">The Tech Blogger</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+<div class="mx-auto mt-4" style="width: 300px; text-align: center;">
+    <h2>Previous Posts</h2>
+</div>
+<div class="card mx-auto mt-4" style="width:800px; border: 1px solid black;" id="cards">
+    <div class="card-header d-flex justify-content-between" style="background-color:gray;">
+        <h5>Post Title</h5>
+        <h5 style="float: right;">Posted by user on 04/01/2021</h5>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Post information</p>
+        <button id="updateBtn" class="btn btn-primary">Update Post</button>
+        <button id="delPostBtn" class="btn btn-primary">Delete Post</button>
+    </div>
+    <footer class="page-footer font-small badge-dark fixed-bottom">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> thetechblogger.com</a>
+        </div>
+    </footer>
+</div>

@@ -9,17 +9,14 @@ html {
 }
 
 #body {
-  background-image: url(./assets/external-content.duckduckgo.com.jpg);
+  background-image: url(../../assets/images/wooden-desk-flatly.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #navbar a {
-  font-size: 25px;
+  font-size: 30px;
 }
 
-#cards div {
-  /* padding: 20px;
-  margin: 20px; */
-}
+
