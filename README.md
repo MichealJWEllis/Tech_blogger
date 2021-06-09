@@ -13,4 +13,5 @@ post model - each post belongs to user has many comments  -->
 
 need to create post-routes functionality 
 need to create the javascript for page functionality
+need to add findOne for comment-routes
 
