@@ -24,7 +24,7 @@ const commentdata = [
     {
         comment_text: 'In hac habitasse platea dictumst.',
         user_id: 2,
-        post_id: 1
+        post_id: 4
     }
 
 ];
