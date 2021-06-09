@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+// const hbs = exphbs.create({ helpers });
 const app = express();
 const PORT = process.env.PORT || 3001;
 const sequelize = require("./config/connection");
@@ -25,11 +25,14 @@ app.engine('handlebars', exphbs({
   runtimeOptions: {
     allowProtoPropertiesByDefault: true,
     allowProtoMethodsByDefault: true,
+
   },
 })
 );
 // app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+const helpers = require('./utils/helpers');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

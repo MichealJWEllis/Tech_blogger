@@ -2,23 +2,23 @@ const { Post } = require('../models');
 
 const postdata = [
     {
-        title: 'Donec posuere metus vitae ipsum.',
-        postText: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
+        title: 'GitHub',
+        postText: 'Posted information on GitHub',
         user_id: 1
     },
     {
-        title: 'Morbi non quam nec dui luctus rutrum.',
-        postText: 'https://nasa.gov/donec.json',
+        title: 'IP Addresses',
+        postText: 'Posted information on IP Addresses',
         user_id: 3
     },
     {
-        title: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
-        postText: 'https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx',
+        title: 'VPN',
+        postText: 'Posted information on VPNs',
         user_id: 1
     },
     {
-        title: 'Nunc purus.',
-        postText: 'http://desdev.cn/enim/blandit/mi.jpg',
+        title: 'Python',
+        postText: 'Posted information on python coding',
         user_id: 2
     }
 ]
