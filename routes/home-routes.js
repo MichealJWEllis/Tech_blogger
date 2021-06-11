@@ -5,21 +5,33 @@ const { Post, Comment, Users } = require('../models')
 
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: ['user_id', 'title', 'postText', 'created_at'],
+        attributes: [
+            'id',
+            'user_id',
+            'title',
+            'postText',
+            'created_at'
+        ],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'user_id', 'comment_text']
+                attributes: ['id', 'user_id', 'comment_text'],
+                include: {
+                    model: Users,
+                    attributes: ['id', 'username', 'email']
+                }
             },
             {
                 model: Users,
-                attributes: ['id', 'username']
+                attributes: ['id', 'username', 'email']
             }
         ]
     })
         .then(data => {
-            res.render('login', { post: data, title: 'The Tech Blog' });
-            // console.log(data)
+            const posts = data.map(post => post.get({ plain: true }))
+
+            res.render('login', { posts, loggedIn: req.session.logginIn, title: 'The Tech Blog' });
+            console.log(posts)
         })
 
 });

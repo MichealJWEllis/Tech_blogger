@@ -3,13 +3,16 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/dashboard"
+                        style=" background: transparent; color: white; border-style: none; outline: none; ">Dashboard
+                        <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="/">Logout<button
+                            style="background: transparent; color: white; border-style: none; outline: none;"></button></a>
                 </li>
             </ul>
-            <a class="navbar-brand" href="#">The Tech Blogger</a>
+            <a class=" navbar-brand" href="#">The Tech Blogger</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -18,24 +21,42 @@
     </nav>
 </header>
 <div class="card mx-auto mt-4" style="width:800px; border: 1px solid black" id="cards">
-    <div class="card-header" style="text-align: center; background-color:gray;">
+    <div class="card-header" style="text-align: center; background-color:rgba(10, 56, 209, 0.35);;">
         <h3>Add Post</h3>
     </div>
-    <div class="card-body ">
+    <form class="card-body postForm">
         <p class="card-text">
         <h5>Post Title:</h5>
         </p>
-        <input type="text" class="d-flex mb-2" style="width: 600px;" id="">
+        <input type="text" class="d-flex mb-2" style="width: 600px;" id="pstTitle">
         <p class="card-text">
         <h5>Post Information:</h5>
         </p>
-        <textarea id="postInfo" class="d-flex mb-2" name="comment" style="width: 600px; height: 80px;"></textarea>
-        <a href="#" class="btn btn-primary">Create Post</a>
-        <a href="#" class="btn btn-primary">Cancel</a>
-    </div>
+        <textarea class="d-flex mb-2" name="comment" style="width: 600px; height: 80px;" id="pstDesc"></textarea>
+        <button class="btn btn-primary createPst">Create Post</button>
+        <a href="/dashboard" class="btn btn-primary">Cancel</a>
+        <a href="/dashboard" class="btn btn-primary">Back</a>
+    </form>
     <footer class="page-footer font-small badge-dark fixed-bottom">
         <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="#"> thetechblogger.com</a>
         </div>
     </footer>
 </div>
+<div class="bs-example">
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Post Created</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Great Job 😃 You just created a post 🎉</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/crud.js"></script>

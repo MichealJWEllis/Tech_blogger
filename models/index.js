@@ -9,23 +9,19 @@ Users.hasMany(Post, {
 });
 
 Post.belongsTo(Users, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'user_id'
 });
 
 Comment.belongsTo(Users, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'user_id'
 });
 
 Comment.belongsTo(Post, {
-    foreignKey: 'post_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'post_id'
 });
 
 Users.hasMany(Comment, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'user_id'
 });
 
 Post.hasMany(Comment, {

@@ -3,13 +3,17 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                    <a class="nav-link">Dashboard <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Create Post</a>
+                    <a class="nav-link logout" href="/crud">Create
+                        Post<button style="background: transparent; color: white; border-style: none; outline: none "
+                            ;></button></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link logout" href="/" ">Logout<button
+                            style=" background: transparent; color: white; border-style: none; outline: none;"
+                        ;></button></a>
                 </li>
             </ul>
             <a class="navbar-brand" href="#">The Tech Blogger</a>
@@ -20,10 +24,10 @@
         </div>
     </nav>
 </header>
-<div class="mx-auto mt-4" style="width: 300px; text-align: center;">
+{{!-- <div class="mx-auto mt-4" style="width: 300px; text-align: center;">
     <h2 style="color:white">Previous Posts</h2>
-</div>
-<div class="card mx-auto mt-4" style="width:800px; border: 1px solid black;" id="cards">
+</div> --}}
+{{!-- <div class="card mx-auto mt-4" style="width:800px; border: 1px solid black;" id="cards">
     <div class="card-header d-flex justify-content-between" style="background-color:gray;">
         <h5>Post Title</h5>
         <h5 style="float: right;">Posted by user on 04/01/2021</h5>
@@ -45,10 +49,13 @@
             </form>
         </div>
     </div>
-</div>
+</div> --}}
+
+{{!-- {{#each posts as |post|}}
 <div class="card mx-auto mt-4" style="width:800px; border: 1px solid black;" id="cards">
+
     <div class="card-header d-flex justify-content-between" style="background-color:gray;">
-        <h5>Post Title</h5>
+        <h5>Post Title:{{this.title}} </h5>
         <h5 style="float: right;">Posted by user on 04/01/2021</h5>
     </div>
     <div class="card-body">
@@ -58,12 +65,44 @@
         <button id="updateBtn" class="btn btn-primary">Update Post</button>
         <button id="delPostBtn" class="btn btn-primary">Delete Post</button>
         <button id="commentBtn" class="btn btn-primary">Comment</button>
-        <div>
+    </div>
 
+    {{/each}}
+    <br> --}}
+    <div class="mx-auto mt-4" style="width: 300px; text-align: center;">
+        <h2 style="color:white;">Current Posts</h2>
+    </div>{{#each posts as |post|}}
+    <div class="card mx-auto mt-4" style="width:800px; border: 1px solid black;" id="cards">
+        <div class="card-header d-flex justify-content-between" style="background-color:rgba(10, 56, 209, 0.35);">
 
-            <footer class="page-footer font-small badge-dark fixed-bottom">
-                <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="#"> thetechblogger.com</a>
-                </div>
-            </footer>
+            <h5>Post Title: {{this.title}}</h5>
+            <h5 style="float: right; font-style: italic">Posted by: {{this.user.username}} on {{format_date
+                this.created_at}}</h5>
         </div>
+        <div class="card-body">
+            <p class="card-text">{{this.postText}}</p>
+            <button id="updateBtn" class="btn btn-primary">Update Post</button>
+            <button id="delPostBtn" class="btn btn-primary">Delete Post</button>
+            <button id="commentBtn" class="btn btn-primary">Comment</button>
+
+        </div>
+
+        <div class="card-body">{{#each comments as |comment|}}
+            <h5 class="card-text" style="font-style: italic">Comment by: {{this.user.username}}</h5>
+            <p class="card-text">- {{this.comment_text}}</p>
+            {{/each}}
+        </div>
+
+
+    </div>
+    <br>
+    {{/each}}
+    <div>
+        <footer class="page-footer font-small badge-dark">
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="#"> thetechblogger.com</a>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="js/dashboard.js"></script>
