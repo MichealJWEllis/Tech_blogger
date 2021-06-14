@@ -1,10 +1,13 @@
-async function getPostInfo(event) {
-    event.preventDefault();
+function getPostInfo() {
+
 
 
 
     console.log('test')
 
+
 }
 
-document.querySelector('.postForm').addEventListener('submit', getPostInfo);
+// document.querySelector('.postForm').addEventListener('click', getPostInfo);
+
+// document.getElementById("commentBtn").addEventListener("click", getPostInfo);

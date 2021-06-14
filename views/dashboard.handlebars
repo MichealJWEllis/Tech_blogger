@@ -72,18 +72,19 @@
     <div class="mx-auto mt-4" style="width: 300px; text-align: center;">
         <h2 style="color:white;">Current Posts</h2>
     </div>{{#each posts as |post|}}
-    <form class="card mx-auto mt-4 postForm" style="width:800px; border: 1px solid black;" id="cards">
+    <form class="card mx-auto mt-4"  style=" width:800px; border: 1px solid black;" id="cards">
         <div class="card-header d-flex justify-content-between" style="background-color:rgba(10, 56, 209, 0.35);">
 
             <h5>Post Title: {{this.title}}</h5>
             <h5 style="float: right; font-style: italic">Posted by: {{this.user.username}} on {{format_date
                 this.created_at}}</h5>
         </div>
-        <div class="card-body" data-id="{{this.id}}">
+        <div class="card-body">
             <p class="card-text">{{this.postText}}</p>
             <button id="updateBtn" class="btn btn-primary">Update Post</button>
             <button id="delPostBtn" class="btn btn-primary">Delete Post</button>
-            <button id="commentBtn" class="btn btn-primary">Comment</button>
+            <button type="button" onclick="getPostInfo()" id="commentBtn"
+                class="btn btn-primary postForm">Comment</button>
 
         </div>
 
