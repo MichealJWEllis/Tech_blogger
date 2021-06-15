@@ -44,7 +44,7 @@ JavaScript, MySQL, Sequelize, Handlebars, NodeJS
 
 ## Screenshot
 
-![Alt text](assets\images\TheTechBlog.png)
+![Alt text](/assets/images/TheTechBlog.png)
 
 ---
 
