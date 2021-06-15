@@ -80,7 +80,7 @@ router.post('/', (req, res) => {
     Post.create({
         title: req.body.title,
         postText: req.body.postText,
-        user_id: req.session.user_id
+        user_id: req.body.user_id
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -94,7 +94,8 @@ router.put('/:id', (req, res) => {
     Post.update(
         {
             title: req.body.title,
-            postText: req.body.postText
+            postText: req.body.postText,
+            id: req.body.id
         },
         {
             where: {

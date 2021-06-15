@@ -5,16 +5,17 @@
 
 body,
 html {
-  min-height: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
-
+#content {
+  padding-bottom: 100px;
+  /* Height of the footer element */
+}
 
 #navbar a {
   font-size: 30px;
 }
-
-
