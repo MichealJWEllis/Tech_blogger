@@ -11,10 +11,6 @@ html {
   background-position: center;
   background-size: cover;
 }
-#content {
-  padding-bottom: 100px;
-  /* Height of the footer element */
-}
 
 #navbar a {
   font-size: 30px;
